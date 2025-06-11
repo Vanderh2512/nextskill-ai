@@ -6,41 +6,26 @@ st.set_page_config(page_title="Skill Gap Learning Path", page_icon="📚", layou
 st.markdown("# 📚 Recommended Learning Paths")
 st.markdown("These course suggestions are based on your skill gaps from the job matching engine.")
 
-# Simulate retrieval of missing skills from session state or static input
-# In a real app, this would come from session_state or another page
+# Simulated missing skills (in real app, this comes from session state or earlier flow)
 user_missing_skills = ["Project Management", "SQL", "Communication"]
 
-# Inline skill → course map (this would usually be imported or loaded from file/db)
-skill_course_map = {
-    "Project Management": [
-        {"title": "Google Project Management Certificate", "provider": "Coursera", "url": "https://www.coursera.org/professional-certificates/google-project-management"},
-        {"title": "Project Management for Beginners", "provider": "LinkedIn Learning", "url": "https://www.linkedin.com/learning/project-management-foundations"}
-    ],
-    "SQL": [
-        {"title": "SQL for Data Science", "provider": "Coursera", "url": "https://www.coursera.org/learn/sql-for-data-science"},
-        {"title": "Intro to SQL", "provider": "Khan Academy", "url": "https://www.khanacademy.org/computing/computer-programming/sql"}
-    ],
-    "Communication": [
-        {"title": "Business Communication", "provider": "Coursera", "url": "https://www.coursera.org/learn/business-communication"},
-        {"title": "Effective Communication", "provider": "LinkedIn Learning", "url": "https://www.linkedin.com/learning/communication-foundations"}
-    ],
-    "Python": [
-        {"title": "Python for Everybody", "provider": "Coursera", "url": "https://www.coursera.org/specializations/python"},
-        {"title": "Learn Python 3", "provider": "Codecademy", "url": "https://www.codecademy.com/learn/learn-python-3"}
-    ]
-}
+# Load skill-to-course map from external JSON file in project root
+try:
+    with open("sample_skill_course_map.json", "r") as f:
+        skill_course_map = json.load(f)
+except Exception as e:
+    st.error("Failed to load skill-course mapping.")
+    st.stop()
 
-# Show personalized suggestions
+# Show dynamic course suggestions per missing skill
 for skill in user_missing_skills:
+    st.markdown(f"### 🧩 {skill}")
     if skill in skill_course_map:
-        st.markdown(f"### 🧩 {skill}")
         for course in skill_course_map[skill]:
             st.markdown(f"- [{course['title']}]({course['url']})  
   _{course['provider']}_")
-        st.markdown("---")
     else:
-        st.markdown(f"### 🧩 {skill}")
         st.warning("No course recommendations available yet.")
-        st.markdown("---")
+    st.markdown("---")
 
 st.info("This prototype pulls real-time recommendations based on your skill gaps.")
