@@ -3,29 +3,29 @@ import json
 
 st.set_page_config(page_title="Skill Gap Learning Path", page_icon="📚", layout="centered")
 
-st.markdown("# 📚 Recommended Learning Paths")
-st.markdown("These course suggestions are based on your skill gaps from the job matching engine.")
+st.title("📚 Recommended Learning Paths")
+st.markdown("These suggestions are based on your missing skills from the job matching results.")
 
-# Simulated missing skills (in real app, this comes from session state or earlier flow)
+# Example placeholder: In real app this comes from session state or previous page
 user_missing_skills = ["Project Management", "SQL", "Communication"]
 
-# Load skill-to-course map from external JSON file in project root
+# Load course mapping from external JSON file
 try:
-    with open("sample_skill_course_map.json", "r") as f:
-        skill_course_map = json.load(f)
+    with open("sample_skill_course_map.json", "r") as file:
+        skill_course_map = json.load(file)
 except Exception as e:
-    st.error("Failed to load skill-course mapping.")
+    st.error("Could not load course recommendations file.")
     st.stop()
 
-# Show dynamic course suggestions per missing skill
+# Show learning recommendations per missing skill
 for skill in user_missing_skills:
-    st.markdown(f"### 🧩 {skill}")
+    st.subheader(f"🧩 {skill}")
     if skill in skill_course_map:
         for course in skill_course_map[skill]:
             st.markdown(f"- [{course['title']}]({course['url']})  
   _{course['provider']}_")
     else:
-        st.warning("No course recommendations available yet.")
+        st.warning("No courses found for this skill.")
     st.markdown("---")
 
-st.info("This prototype pulls real-time recommendations based on your skill gaps.")
+st.info("More personalized, dynamic recommendations coming soon!")
