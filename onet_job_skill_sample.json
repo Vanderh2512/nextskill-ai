@@ -1,0 +1,64 @@
+{
+  "Chief Learning Officer": [
+    "Learning Strategies",
+    "Critical Thinking",
+    "Management of Personnel Resources",
+    "Speaking",
+    "Coordination",
+    "Systems Evaluation"
+  ],
+  "Instructional Designer": [
+    "Critical Thinking",
+    "Writing",
+    "Reading Comprehension",
+    "Coordination"
+  ],
+  "Project Manager": [
+    "Coordination",
+    "Time Management",
+    "Monitoring",
+    "Judgment and Decision Making"
+  ],
+  "Training Specialist": [
+    "Speaking",
+    "Active Listening",
+    "Critical Thinking",
+    "Learning Strategies"
+  ],
+  "Organizational Development Director": [
+    "Systems Analysis",
+    "Personnel Management",
+    "Leadership",
+    "Active Listening"
+  ],
+  "HR Strategy Manager": [
+    "Judgment and Decision Making",
+    "Speaking",
+    "Active Listening",
+    "Monitoring"
+  ],
+  "Learning and Development Manager": [
+    "Learning Strategies",
+    "Critical Thinking",
+    "Judgment and Decision Making",
+    "Monitoring"
+  ],
+  "Talent Development Director": [
+    "Management of Personnel Resources",
+    "Systems Evaluation",
+    "Critical Thinking",
+    "Speaking"
+  ],
+  "Corporate Trainer": [
+    "Instruction",
+    "Speaking",
+    "Critical Thinking",
+    "Active Listening"
+  ],
+  "Education Program Director": [
+    "Program Management",
+    "Coordination",
+    "Speaking",
+    "Writing"
+  ]
+}
