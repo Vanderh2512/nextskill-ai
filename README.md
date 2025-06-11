@@ -1,46 +1,93 @@
-# NextSkill AI 🎓🚀
+# 🧠 NextSkill AI – Intelligent Career Path Matching with O*NET
 
-**NextSkill AI** is an intelligent, AI-powered platform that helps individuals identify their skills, match to future-ready careers, and close skill gaps with personalized learning recommendations.
+NextSkill AI is an AI-powered career discovery tool that analyzes your resume skills and matches them to real-world job roles using the U.S. Department of Labor’s **O*NET** database.
 
-## 🔍 What It Does
-
-- 📄 Upload your resume (PDF or TXT)
-- 🧠 Extract key soft + technical skills
-- 💼 Match to top-fit career roles using O*NET-style mappings
-- 📉 Identify skill gaps for those roles
-- 📘 Get personalized course recommendations to close gaps
-- 📊 Visualize your readiness via a learner dashboard
-- 💾 Download a full learner profile report
-
-## 🧪 Try It Now
-
-➡️ Live Streamlit App (after deployment):  
-`https://nextskill-ai-YOUR-APP-ID.streamlit.app`
-
-## 🚀 How to Deploy (Locally)
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the app
-streamlit run nextskill_full_with_export.py
-```
-
-## 📁 Repository Structure
-
-| File | Description |
-|------|-------------|
-| `nextskill_full_with_export.py` | Main Streamlit app |
-| `requirements.txt` | Dependencies for Streamlit Cloud |
-| `README.md` | Project description and usage |
-
-## 💡 Future Enhancements
-
-- Account system and session tracking
-- Employer and advisor dashboards
-- API deployment for third-party integration
+Built with [Streamlit](https://streamlit.io), the app delivers a fast, visual experience for identifying high-potential career paths — complete with skill gaps and job-fit insights.
 
 ---
 
-Built with ❤️ by [Your Name or Organization]
+## 🚀 Live App
+
+👉 [Click to launch the app on Streamlit Cloud](https://nextskill.streamlit.app/)  
+*(Replace with your actual app URL once deployed)*
+
+---
+
+## 🧩 Features
+
+✅ Upload or paste your resume skills  
+✅ Matches to over **1,000 job titles** from the official O*NET database  
+✅ Shows:
+- Top matching jobs
+- Skill coverage %
+- Matched vs. missing skills  
+✅ Easy to deploy, adapt, or expand
+
+---
+
+## 🗂 File Structure
+
+```
+📁 nextskill-ai/
+│
+├── nextskill_updated_with_full_onet.py    # Streamlit app
+├── onet_job_skill_full.json               # Full O*NET job-to-skill mappings
+└── README.md                              # This file
+```
+
+---
+
+## 💻 Run Locally
+
+### Requirements
+- Python 3.8+
+- Streamlit
+
+### Quick Start
+
+```bash
+pip install streamlit
+streamlit run nextskill_updated_with_full_onet.py
+```
+
+Make sure `onet_job_skill_full.json` is in the same directory.
+
+---
+
+## 📚 Data Source
+
+This project uses data from the **O*NET 29.3 Database**  
+© National Center for O*NET Development | [onetcenter.org](https://www.onetcenter.org/)
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! Ideas, improvements, and features are encouraged.
+
+To contribute:
+1. Fork the repo
+2. Create a feature branch
+3. Open a pull request
+
+---
+
+## 💡 Roadmap
+
+- [ ] Resume file upload + skill extraction
+- [ ] Personalized learner dashboard
+- [ ] Admin + employer views
+- [ ] AI-powered skill gap recommendations
+
+---
+
+## 📬 Contact
+
+Built by [Your Name or Org]  
+Have ideas or questions? Open an issue or email: your@email.com
+
+---
+
+## 🛡 License
+
+MIT License — use, fork, and build freely.
